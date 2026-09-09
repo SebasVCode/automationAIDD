@@ -88,7 +88,11 @@ async function extraerPQRs() {
   }
 
   console.log('Iniciando navegador...');
-  const browser = await chromium.launch({ headless: MODO_HEADLESS, timeout: 30000 });
+  const browser = await chromium.launch({
+    headless: MODO_HEADLESS,
+    timeout: 30000,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
   const context = await browser.newContext({
     viewport: { width: 1600, height: 1000 },
   });
