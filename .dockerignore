@@ -1,0 +1,8 @@
+﻿node_modules/
+.env
+output/
+reporte-prueba.xlsx
+cloudflared.exe
+.git/
+.gitignore
+*.log
